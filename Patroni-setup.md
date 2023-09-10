@@ -152,7 +152,7 @@ vi /etc/keepalived/keepalived.conf
 
 ![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/591a2565-0f91-4b54-a54e-860576d30a83)      ![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/6b73177d-f56b-477b-bf06-4d9818936b86)
 
-``` 
+```ruby
 p1:
 vrrp_script check_haproxy {
   script "pkill -0 haproxy"
@@ -175,7 +175,7 @@ vrrp_instance VI_1 {
 
 ```
 
-```
+```ruby
 p2:
 vrrp_script check_haproxy {
    script "pkill -0 haproxy"
@@ -304,7 +304,7 @@ vi /etc/patroni/patroni.yml
 
 ![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/b4479188-684e-4660-8ee3-04277be6511a)
 
-```
+```ruby
 scope: postgres
 namespace: /db/
 name: p1 
@@ -393,7 +393,7 @@ patronictl -c /etc/patroni/patroni.yml switchover
 ```
 
 vi HATest.py
-```
+```ruby
 import psycopg2
 import argparse
 import socket
