@@ -248,9 +248,9 @@ listen primary
     option httpchk OPTIONS /master
     http-check expect status 200
     default-server inter 3s fall 3 rise 2 on-marked-down shutdown-sessions
-    server p4 192.168.110.189:5432 maxconn 100 check port 8008
-    server p5 192.168.110.190:5432 maxconn 100 check port 8008
-    server p6 192.168.110.191:5432 maxconn 100 check port 8008
+    server p1 192.168.110.189:5432 maxconn 100 check port 8008
+    server p2 192.168.110.190:5432 maxconn 100 check port 8008
+    server p3 192.168.110.191:5432 maxconn 100 check port 8008
 
 listen standby
     bind 192.168.110.192:5001
@@ -258,9 +258,9 @@ listen standby
     option httpchk OPTIONS /replica
     http-check expect status 200
     default-server inter 3s fall 3 rise 2 on-marked-down shutdown-sessions
-    server p4 192.168.110.189:5432 maxconn 100 check port 8008
-    server p5 192.168.110.190:5432 maxconn 100 check port 8008
-    server p6 192.168.110.191:5432 maxconn 100 check port 8008
+    server p1 192.168.110.189:5432 maxconn 100 check port 8008
+    server p2 192.168.110.190:5432 maxconn 100 check port 8008
+    server p3 192.168.110.191:5432 maxconn 100 check port 8008
 
 ```
 
