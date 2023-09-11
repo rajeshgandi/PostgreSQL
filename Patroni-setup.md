@@ -1,5 +1,20 @@
 ## Patroni-Setup
 
+![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/dfcb5c19-4e88-4e6f-a876-cd16f24d649c)
+
+### etcd  		
+- etcd ensures that the configuration data is consistent across all nodes    
+- etcd ping to HAProxy and Keepalived and all the patroni servers  
+### Keepalived
+- monitor the health of the PostgreSQL nodes.  
+- switch the virtual IP address to a healthy node in case of a failure  
+### HAProxy
+- load balancer   
+### Patroni
+- Replication, Sync  
+### Watchdog
+- It's a backend process responsible for monitoring the health of the PostgreSQL nodes  
+
 ```
 192.168.110.189	p1
 192.168.110.190	p2
@@ -302,7 +317,8 @@ mkdir -p /etc/patroni
 vi /etc/patroni/patroni.yml
 ```
 
-![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/96802d7b-fabe-4e2d-9638-0c5430b64c4f)
+![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/02449058-63a1-401e-b386-213d5f34728b)
+
 
 ```ruby
 scope: postgres
