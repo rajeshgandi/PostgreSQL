@@ -302,7 +302,7 @@ mkdir -p /etc/patroni
 vi /etc/patroni/patroni.yml
 ```
 
-![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/b4479188-684e-4660-8ee3-04277be6511a)
+![image](https://github.com/rajeshgandi/PostgreSQL/assets/136494079/96802d7b-fabe-4e2d-9638-0c5430b64c4f)
 
 ```ruby
 scope: postgres
@@ -314,7 +314,7 @@ restapi:
     connect_address: 192.168.110.189:8008
 
 etcd3:
-    hosts: 192.168.110.131:2379,192.168.110.190:2379,192.168.110.191:2379
+    hosts: 192.168.110.189:2379,192.168.110.190:2379,192.168.110.191:2379
 
 bootstrap:
     dcs:
